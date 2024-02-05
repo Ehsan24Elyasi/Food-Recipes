@@ -1,23 +1,36 @@
 <template>
-   <div class="flex gap-6 justify-center mt-8">
-        <router-link :to="{name: 'byLetter' , params:{letter}}" v-for="letter of letters" :key="letter" >
+<div>
+    <div class="p-8 pb-0">
+    <h1 class="text-4xl font-bold mb-4 text-orange-500">Meals by Letter</h1>
+  </div>
+    <div class="flex flex-wrap justify-center gap-8 px-8 mb-6 mt-8">
+        <router-link   class="w-2 h-2 flex items-center justify-center hover:text-orange-500 hover:scale-150 transition-all" :to="{name: 'byLetter' , params:{letter}}" v-for="letter of letters" :key="letter" >
         {{ letter }}
         </router-link>
     </div> 
+
+    <div   class="grid grid-cols-1 md:grid-cols-4 gap-4 p-8">
+        <MealItem v-for="meal of meals" :key="meal.idmeals" :meal="meal" />
+    </div>
+</div>
 </template>
 
 <script setup>
-import {computed , onMounted , ref} from 'vue';
+import { computed } from '@vue/reactivity';
+import { onMounted, watch } from 'vue';
+import {useRoute } from 'vue-router';
 import store from '../store';
-import axiosClient from '../axiosClient.js';
-const ingredients = ref([])
+import MealItem from '../components/MealItem.vue';
+const route = useRoute()
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split("")
-onMounted(async()=>
-{
-    const response = await axiosClient.get('/list.php?i=list')
-    ingredients.value = response.data
+const meals = computed(() => store.state.mealsByLetter)
+watch(route,()=>{
+    store.dispatch('searchMealsByLetter' , route.params.letter)
 })
-const meals = computed(() => store.state.meals)
+onMounted(()=>
+{
+    store.dispatch('searchMealsByLetter' , route.params.letter)
+})
 </script>
 
 <style>

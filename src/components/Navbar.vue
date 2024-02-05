@@ -13,7 +13,7 @@
 <router-link :to="{name: 'byLetter'}" class="items-center px-2 inline-flex h-full hover:bg-purple-100 transition-colors">
   Meals by Letter   
 </router-link>
-<router-link :to="{name: 'byIngredient'}" class="items-center px-2 inline-flex h-full hover:bg-purple-100 transition-colors">
+<router-link :to="{name: 'ingredients'}" class="items-center px-2 inline-flex h-full hover:bg-purple-100 transition-colors">
   Meals by Ingredients
 </router-link>
 
