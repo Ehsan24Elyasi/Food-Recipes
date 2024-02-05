@@ -2,18 +2,18 @@
   
   <header class="bg-white shadow h-16 flex justify-between items-stretch">
 
-<router-link :to="{name: 'home'}" class="inline-flex items-center px-5">
+<router-link :to="{name: 'home'}"  class="inline-flex items-center h-full px-5 text-orange-500 font-bold">
   Home
 </router-link>
 
 <div class="flex gap-1">
-  <router-link :to="{name: 'byName'}" class=" items-center px-2 inline-flex h-full hover:bg-purple-100 transition-colors">
+  <router-link :to="{name: 'byName'}"  class="inline-flex items-center px-2 h-full transition-colors hover:bg-orange-500 hover:text-white">
     Meals by Name   
 </router-link>
-<router-link :to="{name: 'byLetter'}" class="items-center px-2 inline-flex h-full hover:bg-purple-100 transition-colors">
+<router-link :to="{name: 'byLetter'}"  class="inline-flex items-center px-2 h-full transition-colors hover:bg-orange-500 hover:text-white">
   Meals by Letter   
 </router-link>
-<router-link :to="{name: 'ingredients'}" class="items-center px-2 inline-flex h-full hover:bg-purple-100 transition-colors">
+<router-link :to="{name: 'ingredients'}"  class="inline-flex items-center px-2 h-full transition-colors hover:bg-orange-500 hover:text-white">
   Meals by Ingredients
 </router-link>
 
