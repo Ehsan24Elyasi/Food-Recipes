@@ -1,6 +1,12 @@
-# Vue 3 + Vite
+# Food Recipes
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Introduction
+Food Recipes is a web application designed to help users discover, and save their favorite recipes. This project provides a user-friendly interface to browse a variety of recipes, view detailed instructions, and manage personal recipe collections.
+
+## Features
+- **Recipe Browsing**: Explore a wide range of recipes categorized by cuisine, meal type, or dietary preferences.
+- **Search Functionality**: Quickly find recipes by keywords, ingredients, or categories.
+
 
 ## Recommended IDE Setup
 
