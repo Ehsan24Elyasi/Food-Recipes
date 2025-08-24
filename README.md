@@ -15,6 +15,16 @@
 
 ---
 
+
+## 🔗 Data Source
+This project uses the **[TheMealDB API](https://www.themealdb.com/api.php)** to fetch recipe data.  
+Example endpoints:
+- **Random Recipe**: `https://www.themealdb.com/api/json/v1/1/random.php`
+- **Search by Name**: `https://www.themealdb.com/api/json/v1/1/search.php?s=salmon`
+- **List Ingredients**: `https://www.themealdb.com/api/json/v1/1/list.php?i=list`
+
+---
+
 ## 💻 Technologies Used
 - **Frontend**: Vue 3 + TypeScript + TailwindCSS  
 - **State Management**: Pinia  
@@ -43,6 +53,8 @@ npm run dev
 
 ## 🎬 Demo
 Check out the live demo here: [Food Recipes Demo]() 🍴
+
+![Food Recipes Demo](./src/assets/FoodDemoGif.gif)
 
 ---
 
